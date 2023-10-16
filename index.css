@@ -1,0 +1,135 @@
+/*body {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+}
+
+.container {
+    background-color: aliceblue;
+    padding: 1em;
+    width: 600px;
+    border-radius: 1em;
+    border: 2px solid #000;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        width: auto;
+        padding: 0.5em;
+    }
+    div {
+        width: 80vw;
+        height: 20vh;
+    }
+    div>button {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+}*/
+
+/* Estilos para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dbd0d0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para o contêiner da lista de tarefas */
+.container {
+    background-color: #fff;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Estilos para o cabeçalho da lista de tarefas */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para o input e botão */
+div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+input.nova_tarefa {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button.btn_tarefa {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Estilos para a lista de tarefas */
+ul.lista_tarefa {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+ul.lista_tarefa li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 10px;
+}
+
+ul.lista_tarefa li .tarefa_text {
+    flex-grow: 1;
+}
+
+ul.lista_tarefa li button.excluir_tarefa {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button{
+    margin-left: 1em;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        width: auto;
+        padding: 0.5em;
+    }
+    div {
+        width: 80vw;
+        height: 20vh;
+    }
+    div>button {
+        width: 30%;
+    }
+}

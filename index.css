@@ -1,37 +1,3 @@
-/*body {
-    margin: 0;
-    padding: 0;
-    max-width: 100%;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    min-height: 100vh; 
-}
-
-.container {
-    background-color: aliceblue;
-    padding: 1em;
-    width: 600px;
-    border-radius: 1em;
-    border: 2px solid #000;
-}
-
-@media (max-width: 768px) {
-    .container {
-        max-width: 100%;
-        width: auto;
-        padding: 0.5em;
-    }
-    div {
-        width: 80vw;
-        height: 20vh;
-    }
-    div>button {
-        width: 100%;
-        margin-bottom: 1em;
-    }
-}*/
-
 /* Estilos para o corpo da página */
 body {
     font-family: Arial, sans-serif;
@@ -47,12 +13,14 @@ body {
 /* Estilos para o contêiner da lista de tarefas */
 .container {
     background-color: #fff;
-    max-width: 400px;
+    max-width: 100%; /* Use 100% para adaptar a largura a todas as telas */
+    width: 40%; /* Limita a largura do contêiner */
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: center;
+    margin: 10px; /* Adicione margem para separar do limite da tela */
 }
 
 /* Estilos para o cabeçalho da lista de tarefas */
@@ -64,16 +32,18 @@ h1 {
 /* Estilos para o input e botão */
 div {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Mude para uma coluna em telas menores */
     align-items: center;
     margin-top: 10px;
 }
 
 input.nova_tarefa {
     flex-grow: 1;
+    width: 100%; /* Ocupa toda a largura disponível */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-bottom: 10px; /* Adicione espaço entre o input e o botão */
 }
 
 button.btn_tarefa {
@@ -83,6 +53,7 @@ button.btn_tarefa {
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
+    width: 50%;
 }
 
 /* Estilos para a lista de tarefas */
@@ -94,7 +65,7 @@ ul.lista_tarefa {
 
 ul.lista_tarefa li {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Mude para uma coluna em telas menores */
     align-items: center;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -104,6 +75,7 @@ ul.lista_tarefa li {
 
 ul.lista_tarefa li .tarefa_text {
     flex-grow: 1;
+    width: 100%; /* Ocupa toda a largura disponível */
 }
 
 ul.lista_tarefa li button.excluir_tarefa {
@@ -113,23 +85,4 @@ ul.lista_tarefa li button.excluir_tarefa {
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer;
-}
-
-button{
-    margin-left: 1em;
-}
-
-@media (max-width: 768px) {
-    .container {
-        max-width: 100%;
-        width: auto;
-        padding: 0.5em;
-    }
-    div {
-        width: 80vw;
-        height: 20vh;
-    }
-    div>button {
-        width: 30%;
-    }
 }

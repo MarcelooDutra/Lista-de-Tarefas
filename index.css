@@ -1,27 +1,31 @@
 /* Estilos para o corpo da página */
+/* Estilos para o corpo da página */
 body {
     font-family: Arial, sans-serif;
-    background-color: #dbd0d0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #dbd0d0;
     margin: 0;
     padding: 0;
+    height: 100vh;
+    overflow: auto;
 }
 
 /* Estilos para o contêiner da lista de tarefas */
 .container {
     background-color: #fff;
-    max-width: 100%; /* Use 100% para adaptar a largura a todas as telas */
-    width: 40%; /* Limita a largura do contêiner */
+    width: 600px; /* Defina o tamanho fixo em 600px */
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: center;
-    margin: 10px; /* Adicione margem para separar do limite da tela */
+    margin: 10px;
 }
+
+/* Resto dos estilos permanecem os mesmos */
+
 
 /* Estilos para o cabeçalho da lista de tarefas */
 h1 {
@@ -30,20 +34,19 @@ h1 {
 }
 
 /* Estilos para o input e botão */
-div {
+.input-btn {
     display: flex;
-    flex-direction: column; /* Mude para uma coluna em telas menores */
     align-items: center;
+    justify-content: center;
     margin-top: 10px;
 }
 
 input.nova_tarefa {
     flex-grow: 1;
-    width: 100%; /* Ocupa toda a largura disponível */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 10px; /* Adicione espaço entre o input e o botão */
+    margin-right: 10px;
 }
 
 button.btn_tarefa {
@@ -53,36 +56,25 @@ button.btn_tarefa {
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
-    width: 50%;
 }
 
 /* Estilos para a lista de tarefas */
+.lista-wrapper {
+    max-height: 50vh; /* Defina a altura máxima para acionar a barra de rolagem */
+    overflow: auto; /* Adicionar barra de rolagem quando necessário */
+}
+
 ul.lista_tarefa {
     list-style-type: none;
     padding: 0;
-    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 ul.lista_tarefa li {
-    display: flex;
-    flex-direction: column; /* Mude para uma coluna em telas menores */
-    align-items: center;
+    flex: 0 0 calc(33.33% - 10px);
+    margin: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin: 5px 0;
     padding: 10px;
-}
-
-ul.lista_tarefa li .tarefa_text {
-    flex-grow: 1;
-    width: 100%; /* Ocupa toda a largura disponível */
-}
-
-ul.lista_tarefa li button.excluir_tarefa {
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
 }
